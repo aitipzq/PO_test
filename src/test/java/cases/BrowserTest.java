@@ -1,22 +1,17 @@
 package cases;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.DataProvider;
-
 import tasks.baiduSearch;
 import util.Browser;
-import util.RangeDatabyPOI;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 public class BrowserTest {
@@ -25,8 +20,9 @@ public class BrowserTest {
 	
 	@DataProvider(name="muke")
 	public Object[][] getData() throws IOException{
-		String filepath="d:/testmk.xlsx";
-		Object[][] array= RangeDatabyPOI.poiRangeData(filepath);
+//		String filepath="d:/testmk.xlsx";
+//		Object[][] array= RangeDatabyPOI.poiRangeData(filepath);
+		Object[][] array = {{"fengluo","shuai"},{"muke","bang"}};
 		return array;
 	}
 	

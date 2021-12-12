@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Maven_Test" parallel="tests" thread-count="1">
-	<test name="browsertest">
-		<classes>
-			<class name="cases.BrowserTest">
-			</class>
-   			 <parameter name="browser" value="firefox"></parameter>
-   			 <parameter name="url" value="http://www.baidu.com"></parameter>
-   		</classes>
-	</test>
-	<!-- 
-	<listeners>
-		<listener class-name="extentx.ExtentTestNGITestListener"></listener>
-	</listeners>
-	 -->
+    <test name="browsertest">
+        <classes>
+            <class name="cases.BrowserTest">
+            </class>
+            <parameter name="browser" value="chrome"></parameter>
+            <parameter name="url" value="http://www.baidu.com"></parameter>
+        </classes>
+    </test>
+    <!--
+    <listeners>
+        <listener class-name="extentx.ExtentTestNGITestListener"></listener>
+    </listeners>
+     -->
 </suite>

@@ -22,7 +22,9 @@ public class ReadProperties {
 	 */
 	public static String getprop(String filename,String folder, String propname) throws FileNotFoundException, IOException {
 		Properties props = new Properties();
-		props.load(new FileInputStream("./test-classes/"+folder+"/"+filename+".properties"));
+		String path = ClassLoader.getSystemClassLoader().getResource(folder + "/" + filename + ".properties").getPath();
+		props.load(new FileInputStream(path));
+//		props.load(new FileInputStream("./test-classes/"+folder+"/"+filename+".properties"));
 		 String str = props.getProperty(propname);
 		return str;
 		

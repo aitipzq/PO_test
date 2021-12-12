@@ -13,7 +13,7 @@ public class Browser {
 	
 	public static WebDriver openBrowser(WebDriver dr,String browser,String url){
 		if (browser.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "d:\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Python39\\chromedriver.exe");
 			dr= new ChromeDriver();
 			}
 		else if (browser.equals("firefox")){
